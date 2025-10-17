@@ -1,0 +1,12 @@
+# Ignore all node_modules folders in the project
+node_modules/
+
+# Ignore the .env file (which contains secrets)
+.env
+
+# Ignore Vite build output folder
+/client/dist
+
+# Ignore common OS and IDE files
+.DS_Store
+.vscode/
