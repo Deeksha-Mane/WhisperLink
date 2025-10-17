@@ -21,7 +21,7 @@ function HomePage() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('${import.meta.env.VITE_API_URL}/api/secrets', {
+      const response = await axios.post('http://localhost:5000/api/secrets', {
         message: message,
       });
 
