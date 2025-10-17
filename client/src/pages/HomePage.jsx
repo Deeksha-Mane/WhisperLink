@@ -21,12 +21,10 @@ function HomePage() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/secrets', {
-        message: message,
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/secrets`, {
+      message: message, 
       });
-
-      setLinkId(response.data.id);
-      
+      setLinkId(response.data.id);   
     } catch (err) {
       console.error(err);
       setError('The magic failed! Please try casting again.');
